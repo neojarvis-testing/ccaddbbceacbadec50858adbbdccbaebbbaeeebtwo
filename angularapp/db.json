@@ -1,0 +1,77 @@
+{
+  "athletes": [
+    {
+      "name": "John Doe",
+      "age": 28,
+      "email": "john.doe@example.com",
+      "phoneNumber": "1234567831",
+      "sportType": "Soccer",
+      "teamName": "Team A",
+      "ranking": 1,
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "age": 34,
+      "email": "jane.smith@example.com",
+      "phoneNumber": "0987654321",
+      "sportType": "Basketball",
+      "teamName": "Team B",
+      "ranking": 2,
+      "id": 2
+    },
+    {
+      "name": "Alice Johnson",
+      "age": 40,
+      "email": "alice.johnson@example.com",
+      "phoneNumber": "1122334455",
+      "sportType": "Tennis",
+      "teamName": "Team C",
+      "ranking": 3,
+      "id": 3
+    },
+    {
+      "id": 4,
+      "name": "Bob Williams",
+      "age": 25,
+      "email": "bob.williams@example.com",
+      "phoneNumber": "2233445566",
+      "sportType": "Swimming",
+      "teamName": "Team D",
+      "ranking": 4,
+      "id": 4
+    },
+    {
+      "id": 5,
+      "name": "Emily Brown",
+      "age": 29,
+      "email": "emily.brown@example.com",
+      "phoneNumber": "6677889900",
+      "sportType": "Soccer",
+      "teamName": "Team E",
+      "ranking": 5,
+      "id": 5
+    },
+    {
+      "name": "Michael Chen",
+      "age": 23,
+      "email": "michael.chen@gmail.com",
+      "phoneNumber": "1234567809",
+      "sportType": "Basketball",
+      "teamName": "Team F",
+      "ranking": 6,
+      "id": 6
+    },
+    {
+      "name": "Farook",
+      "age": 23,
+      "email": "Ya@gmai.com",
+      "phoneNumber": "9949495511",
+      "sportType": "Soccer",
+      "teamName": "Man",
+      "ranking": 33,
+      "id": 7
+    }
+  ]
+}
