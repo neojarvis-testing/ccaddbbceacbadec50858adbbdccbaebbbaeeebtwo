@@ -1,0 +1,64 @@
+<!-- edit-athlete.component.html -->
+<h2>Edit Athlete</h2>
+<form [formGroup]="athleteForm" (ngSubmit)="onSubmit()">
+  <table>
+    <tr>
+      <td>Name:</td>
+      <td>
+        <input class="form-control" type="text" placeholder="Enter name" formControlName="name">
+      </td>
+    </tr>
+    <tr>
+      <td>Age:</td>
+      <td>
+        <input class="form-control" type="number" placeholder="Enter age" formControlName="age">
+        <div *ngIf="athleteForm.get('age').hasError('min') && athleteForm.get('age').touched">
+          Age must be 18 or greater.
+        </div>
+        <div *ngIf="athleteForm.get('age').hasError('max') && athleteForm.get('age').touched">
+          Age must be 100 or less.
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>Email:</td>
+      <td>
+        <input class="form-control" type="email" placeholder="Enter email" formControlName="email">
+      </td>
+    </tr>
+    <tr>
+      <td>Phone Number:</td>
+      <td>
+        <input class="form-control" type="text" placeholder="Enter phone number" formControlName="phoneNumber">
+      </td>
+    </tr>
+    <tr>
+      <td>Sport Type:</td>
+      <td>
+        <select class="form-control" formControlName="sportType">
+          <option value="Soccer">Soccer</option>
+          <option value="Basketball">Basketball</option>
+          <option value="Tennis">Tennis</option>
+          <option value="Swimming">Swimming</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Team Name:</td>
+      <td>
+        <input class="form-control" type="text" formControlName="teamName">
+      </td>
+    </tr>
+    <tr>
+      <td>Ranking:</td>
+      <td>
+        <input class="form-control" type="number" formControlName="ranking">
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <button type="submit" [disabled]="athleteForm.invalid">Update Athlete</button>
+      </td>
+    </tr>
+  </table>
+</form>

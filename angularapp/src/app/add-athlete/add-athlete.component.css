@@ -1,0 +1,194 @@
+/* add-athlete.component.css */
+
+/* Form Container */
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Table Layout */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  tr {
+    margin-bottom: 15px;
+  }
+  
+  td {
+    padding: 12px;
+    vertical-align: top;
+  }
+  
+  td:first-child {
+    width: 140px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  /* Form Controls */
+  .form-control {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+  
+  .form-control:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.2);
+  }
+  
+  /* Select Dropdown Styling */
+  select.form-control {
+    background-color: white;
+    cursor: pointer;
+    height: 40px;
+  }
+  
+  select.form-control option {
+    padding: 10px;
+  }
+  
+  /* Error Messages */
+  div[class*="hasError"] {
+    color: #f44336;
+    font-size: 12px;
+    margin-top: 5px;
+    padding-left: 2px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Submit Button */
+  button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  button[type="submit"]:hover:not([disabled]) {
+    background-color: #45a049;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  button[type="submit"]:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  /* Input States */
+  .form-control.ng-invalid.ng-touched {
+    border-color: #f44336;
+    background-color: #fff8f8;
+  }
+  
+  .form-control.ng-valid.ng-touched {
+    border-color: #4CAF50;
+    background-color: #f8fff8;
+  }
+  
+  /* Placeholder Styling */
+  ::placeholder {
+    color: #999;
+    opacity: 1;
+  }
+  
+  /* Date Input Specific */
+  input[type="date"] {
+    height: 40px;
+  }
+  
+  /* Number Input Arrows */
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    opacity: 1;
+    height: 30px;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  form {
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+  }
+  
+  .form-control.ng-invalid.ng-touched:focus {
+    animation: shake 0.3s ease-in-out;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    form {
+      margin: 10px;
+      padding: 15px;
+    }
+  
+    table, tr, td {
+      display: block;
+    }
+  
+    td:first-child {
+      padding-bottom: 5px;
+    }
+  
+    td:last-child {
+      padding-top: 5px;
+    }
+  
+    .form-control {
+      font-size: 16px;
+    }
+  
+    button[type="submit"] {
+      padding: 15px;
+    }
+  }
+  
+  /* Accessibility Focus Styles */
+  .form-control:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.25);
+  }
+  
+  /* Error State Highlight */
+  .form-control.ng-invalid.ng-touched + div {
+    padding-left: 5px;
+    border-left: 2px solid #f44336;
+  }
+  
+  /* Success State Subtle Indicator */
+  .form-control.ng-valid.ng-touched {
+    padding-right: 30px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%234CAF50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>');
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 16px;
+  }

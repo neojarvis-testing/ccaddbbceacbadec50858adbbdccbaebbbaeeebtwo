@@ -1,0 +1,138 @@
+/* athlete-list.component.css */
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f8f8f8;
+  }
+  
+  tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  /* Loading Indicator */
+  .loading {
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    color: #666;
+  }
+  
+  /* Button Styles */
+  button {
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  /* Pagination Styles */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    gap: 15px;
+  }
+  
+  .pagination span {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .pagination button {
+    min-width: 80px;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+  
+    th, td {
+      padding: 8px 10px;
+    }
+  
+    .pagination {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  
+  /* Age Category Colors */
+  .young {
+    color: #2196F3;
+  }
+  
+  .middle {
+    color: #FF9800;
+  }
+  
+  .senior {
+    color: #F44336;
+  }
+  
+  /* Edit Button Specific Style */
+  button[routerLink] {
+    background-color: #2196F3;
+  }
+  
+  button[routerLink]:hover {
+    background-color: #1976D2;
+  }
+  
+  /* Table Header Row */
+  thead tr {
+    border-bottom: 2px solid #45a049;
+  }
+  
+  /* Table Cell Alignment */
+  td:nth-child(2), /* Age */
+  td:nth-child(4)  /* Phone Number */ {
+    text-align: center;
+  }
+  
+  /* Date Columns */
+  td:nth-child(6),
+  td:nth-child(7) {
+    white-space: nowrap;
+  }
+  
+  /* Action Column */
+  td:last-child {
+    text-align: center;
+  }

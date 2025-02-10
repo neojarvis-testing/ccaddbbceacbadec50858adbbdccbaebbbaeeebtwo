@@ -1,0 +1,72 @@
+<!-- add-athlete.component.html -->
+<form [formGroup]="athleteForm" (ngSubmit)="onSubmit()">
+    <table>
+      <tr>
+        <td>Name:</td>
+        <td>
+          <input class="form-control" type="text" placeholder="Enter name" formControlName="name">
+          <div *ngIf="athleteForm.get('name').hasError('minlength') && athleteForm.get('name').touched">
+            Name must be at least 3 characters.
+          </div>
+          <div *ngIf="athleteForm.get('name').hasError('maxlength') && athleteForm.get('name').touched">
+            Name must be less than 50 characters.
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>Age:</td>
+        <td>
+          <input class="form-control" type="number" placeholder="Enter age" formControlName="age">
+          <div *ngIf="athleteForm.get('age').hasError('min') && athleteForm.get('age').touched">
+            Age must be 18 or greater.
+          </div>
+          <div *ngIf="athleteForm.get('age').hasError('max') && athleteForm.get('age').touched">
+            Age must be 100 or less.
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>Email:</td>
+        <td>
+          <input class="form-control" type="email" placeholder="Enter email" formControlName="email">
+          <div *ngIf="athleteForm.get('email').hasError('email') && athleteForm.get('email').touched">
+            Please enter a valid email.
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>Phone Number:</td>
+        <td>
+          <input class="form-control" type="text" placeholder="Enter phone number" formControlName="phoneNumber">
+          <div *ngIf="athleteForm.get('phoneNumber').hasError('pattern') && athleteForm.get('phoneNumber').touched">
+            Phone number must be 10 digits.
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>Sport Type:</td>
+        <td>
+          <select class="form-control" formControlName="sportType">
+            <option value="">Select Sport Type</option>
+            <option value="Soccer">Soccer</option>
+            <option value="Basketball">Basketball</option>
+            <option value="Tennis">Tennis</option>
+            <option value="Swimming">Swimming</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Team Name:</td>
+        <td><input class="form-control" placeholder="Enter team name" type="text" formControlName="teamName"></td>
+      </tr>
+      <tr>
+        <td>Ranking:</td>
+        <td><input class="form-control" placeholder="Enter ranking" type="number" formControlName="ranking"></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <button type="submit" [disabled]="athleteForm.invalid">Add Athlete</button>
+        </td>
+      </tr>
+    </table>
+  </form>
